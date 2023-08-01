@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2802421235726456491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2758275268995164063}
+  - component: {fileID: 8722894617885488505}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2758275268995164063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802421235726456491}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8722894617885488505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802421235726456491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14a874a16942e335beacf879676e162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: ActivatePad
+    clip: {fileID: 8300000, guid: 44938abd6568d7818bfa5063f5d033a7, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: ButtonTrigger
+    clip: {fileID: 8300000, guid: 4497bc0ed3c107414a9031f0c24a8ade, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Damage
+    clip: {fileID: 8300000, guid: 481e2165f8e8712c087e8d553d0a9fdf, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Defeat
+    clip: {fileID: 8300000, guid: 920662c34d2fb3244b9fd40d6142280e, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: HitFloor
+    clip: {fileID: 8300000, guid: 7073aafe475da927a8007adccbf24fc3, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: a25385280616dc623a69b93d36acf8e4, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: KillEnemy
+    clip: {fileID: 8300000, guid: df75d3d0b51f6b040af519f43e85d7f7, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: BulletHit
+    clip: {fileID: 8300000, guid: 4201532412131e694996047adcd42b4a, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Select
+    clip: {fileID: 8300000, guid: 0558e765e83c6bb94a2c4bd06c1c85e0, type: 3}
+    volume: 1
+    source: {fileID: 0}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE c2stage>
+<c2stage index="1">
+    <Player pos="-6.5,0.5" rotation="0" scale="1,1" />
+    <NonPhysicsBox pos="0,-5" rotation="0" scale="40,10" />
+    <NonPhysicsBox pos="0,1.4" rotation="45" scale="5,1" name="Ramp" />
+    <NonPhysicsBox pos="-2.5,3.5" rotation="0" scale="1,1" />
+    <Box pos="-17.51,3.93" rotation="0" scale="1,1" name="Box" />
+    <Button pos="3.5,0.5" rotation="0" scale="1,1" toggle="true" enable="false" target="Ramp" />
+    <JumpPad pos="-4.93,0.1" rotation="0" scale="1,0.2" jumpForce="20" />
+    <SpeedPad pos="6.5,0.1" rotation="0" scale="1,0.2" />
+    <Turret pos="-1.5,3.5" rotation="0" scale="1,1" bulletSpeed="300" time="1" />
+    <Spike pos="-3.5,0.3" rotation="0" scale="1,1" />
+    <Enemy pos="-15.24,0.5" rotation="0" scale="1,1" awareness="7" moveTo="-10,0.5" />
+    <Checkpoint pos="-11.2,1.4" rotation="0" scale="1,0.5" />
+    <End pos="14.5,1.5" rotation="0" scale="1,0.5,1" />
+</c2stage>

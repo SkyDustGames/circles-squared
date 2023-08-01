@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE c2stage>
+<c2stage index="2">
+    <Player pos="0,0" rotation="0" scale="1,1" />
+    <NonPhysicsBox pos="0,-5" rotation="0" scale="40,10" />
+    <End pos="14.5,1.5" rotation="0" scale="1,0.5,1" />
+</c2stage>

@@ -65,7 +65,9 @@ public class StageParser : MonoBehaviour {
                 data.objects.Add(stageObject);
             }
 
-            data.index = int.Parse(root.Attributes["index"].Value);
+            XmlAttribute index = root.Attributes["index"];
+            if (index != null)
+                data.index = int.Parse(index.Value);
             return data;
         } catch (XmlException e) {
             Debug.LogError(e);

@@ -14,26 +14,15 @@ public class StageParser : MonoBehaviour {
         if (objects != null) return;
 
         objects = new Dictionary<string, GameObject>();
-        foreach (GameObject gameObject in prefabs) {
+        foreach (GameObject gameObject in prefabs)
             objects.Add(gameObject.name, gameObject);
-        }
-    }
-
-    public static StageData ParseDataFromFile(string path) {
-        try {
-            return ParseData(File.ReadAllText(path));
-        } catch(IOException e) {
-            Debug.LogError(e);
-        }
-        
-        return null;
     }
 
     public static StageData ParseData(TextAsset textAsset) {
-        return ParseData(textAsset.text, true);
+        return ParseData(textAsset.text);
     }
 
-    public static StageData ParseData(string text, bool official = false) {
+    public static StageData ParseData(string text) {
         try {
             XmlDocument document = new XmlDocument();
             document.LoadXml(text);
@@ -79,7 +68,6 @@ public class StageParser : MonoBehaviour {
     private static object GetAttributeValue(string str) {
         if (str.Equals("true")) return true;
         if (str.Equals("false")) return false;
-
         if (str.Contains(",")) return GetVector(str);
 
         try {
@@ -91,6 +79,7 @@ public class StageParser : MonoBehaviour {
 
     private static Vector3 GetVector(string str) {
         string[] s = str.Split(",");
-        return new Vector3(float.Parse(s[0], CultureInfo.InvariantCulture), float.Parse(s[1], CultureInfo.InvariantCulture));
+        return new Vector3(float.Parse(s[0], CultureInfo.InvariantCulture),
+            float.Parse(s[1], CultureInfo.InvariantCulture));
     }
 }

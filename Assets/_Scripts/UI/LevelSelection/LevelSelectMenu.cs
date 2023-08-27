@@ -35,7 +35,7 @@ public abstract class LevelSelectMenu : MonoBehaviour {
 
             Button btn = button.GetComponent<Button>();
             btn.onClick.AddListener(() => {
-                LevelManager.stage = StageParser.ParseData(asset);
+                LevelManager.stage = StageParser.ParseData(asset.text);
                 Scenes.Load(name: "Stage");
             });
 
@@ -73,6 +73,6 @@ public abstract class LevelSelectMenu : MonoBehaviour {
     }
 
     public virtual Task<Dictionary<string, Sprite>> GetSprites() {
-        throw new System.NotImplementedException();
+        return Task.FromResult<Dictionary<string, Sprite>>(null);
     }
 }

@@ -8,6 +8,8 @@ public class EndCheckpoint : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
+            Saves.loaded.unlockedStages.Add(nextStage);
+
             CanvasGroup group = GameObject.Find("YouWin").GetComponent<CanvasGroup>();
             group.DOFade(1f, 1f);
             group.interactable = true;

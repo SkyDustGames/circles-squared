@@ -7,14 +7,13 @@ public class LevelManager : MonoBehaviour {
     public static StageData stage;
 
     private void Start() {
-        if (stage == null) stage = StageParser.ParseData(Resources.Load("Stage1") as TextAsset);
+        stage ??= StageParser.ParseData(Resources.Load("Stage1") as TextAsset);
 
         foreach (StageObject stageObject in stage.objects) {
             GameObject gameObject = Instantiate(stageObject.assign, stageObject.position, Quaternion.Euler(0, 0, stageObject.rotation), environment);
             gameObject.transform.localScale = stageObject.size;
 
-            object name;
-            stageObject.properties.TryGetValue("name", out name);
+            stageObject.properties.TryGetValue("name", out object name);
 
             if (name != null) gameObject.name = (string)name;
 
@@ -26,9 +25,8 @@ public class LevelManager : MonoBehaviour {
             
             if (gameObject.CompareTag("Turret")) {
                 Turret turret = gameObject.GetComponent<Turret>();
-                
-                object prop;
-                stageObject.properties.TryGetValue("bulletSpeed", out prop);
+
+                stageObject.properties.TryGetValue("bulletSpeed", out object prop);
                 if (prop != null)
                     turret.bulletSpeed = (float)prop;
 
@@ -40,8 +38,7 @@ public class LevelManager : MonoBehaviour {
             if (gameObject.CompareTag("Enemy")) {
                 Enemy enemy = gameObject.GetComponent<Enemy>();
 
-                object prop;
-                stageObject.properties.TryGetValue("awareness", out prop);
+                stageObject.properties.TryGetValue("awareness", out object prop);
                 if (prop != null)
                     enemy.radius = (float)prop;
 
@@ -57,8 +54,7 @@ public class LevelManager : MonoBehaviour {
                 if (name != null)
                     button.target = GameObject.Find((string)name);
 
-                object prop;
-                stageObject.properties.TryGetValue("toggle", out prop);
+                stageObject.properties.TryGetValue("toggle", out object prop);
                 if (prop != null && (bool)prop)
                     button.toggleButton = true;
 
